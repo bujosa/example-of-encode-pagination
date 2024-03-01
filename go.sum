@@ -1,6 +1,6 @@
 github.com/educolog7/packages v0.0.0-20240301034039-c0094528bd78 h1:no8vZ/QUaxgYXGUKArGDVnXfLc4kJMW9MYW0ncynV9E=
 github.com/educolog7/packages v0.0.0-20240301034039-c0094528bd78/go.mod h1:Mj97YanRH9+A+ZoqZyfGKiaTo3kptgShRO9N1EHGecg=
+github.com/educolog7/packages v0.0.0-20240301050613-a5011c91e1ff h1:WwmDp+JXDQcHNzHG/8ZblBDDtF1RstWRDuaXGIBMoMQ=
+github.com/educolog7/packages v0.0.0-20240301050613-a5011c91e1ff/go.mod h1:Mj97YanRH9+A+ZoqZyfGKiaTo3kptgShRO9N1EHGecg=
 github.com/golang-jwt/jwt v3.2.2+incompatible h1:IfV12K8xAKAnZqdXVzCZ+TOjboZ2keLg81eXfW3O+oY=
 github.com/golang-jwt/jwt v3.2.2+incompatible/go.mod h1:8pz2t5EyA70fFQQSrl6XZXzqecmYZeUEB8OUGHkxJ+I=
-github.com/speps/go-hashids v2.0.0+incompatible h1:kSfxGfESueJKTx0mpER9Y/1XHl+FVQjtCqRyYcviFbw=
-github.com/speps/go-hashids v2.0.0+incompatible/go.mod h1:P7hqPzMdnZOfyIk+xrlG1QaSMw+gCBdHKsBDnhpaZvc=
