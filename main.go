@@ -4,19 +4,54 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-
-	"github.com/educolog7/packages/types"
 )
 
+type Filter struct {
+	Field    string      `json:"Field"`
+	Operator string      `json:"Operator"`
+	Value    interface{} `json:"Value"`
+}
+
+type Pagination struct {
+	Offset  int      `json:"Offset"`
+	Limit   int      `json:"Limit"`
+	Search  string   `json:"Search"`
+	Sort    string   `json:"Sort"`
+	Order   string   `json:"Order"`
+	Next    string   `json:"Next"`
+	Prev    string   `json:"Prev"`
+	Filters []Filter `json:"Filters"`
+}
+
 func main() {
-	p := types.Pagination{Offset: 10, Limit: 20, Search: "test", Sort: "name", Order: "asc", Prev: "", Next: ""}
-	data, _ := json.Marshal(p)
+	// p := types.Pagination{Offset: 10, Limit: 20, Search: "test", Sort: "name", Order: "asc", Prev: "", Next: ""}
+	data, _ := json.Marshal(Pagination{
+		Offset: 0,
+		Limit:  10,
+		Search: "John",
+		Sort:   "age",
+		Order:  "asc",
+		Next:   "",
+		Prev:   "",
+		Filters: []Filter{
+			{
+				Field:    "name",
+				Operator: "eq",
+				Value:    "John",
+			},
+			{
+				Field:    "age",
+				Operator: "in",
+				Value:    []int{18, 19, 20},
+			},
+		},
+	})
 	result := base64.URLEncoding.EncodeToString(data)
 	fmt.Println("Encoded:", result)
 
 	// Decode data from URL-safe Base64
 	decodedData, _ := base64.URLEncoding.DecodeString(result)
-	var p2 types.Pagination
+	var p2 Pagination
 	json.Unmarshal(decodedData, &p2)
 	fmt.Println("Decoded:", p2)
 
